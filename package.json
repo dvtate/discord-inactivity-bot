@@ -1,0 +1,25 @@
+{
+  "name": "inactivity-bot",
+  "version": "1.0.0",
+  "description": "discord bot which says stuff to keep chat from dying",
+  "main": "index.js",
+  "scripts": {
+    "deploy-commands": "node ./src/deploy-commands.js",
+    "start": "DEBUG=sexo:* node ./src/index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "chatbot",
+    "sexo",
+    "meme"
+  ],
+  "author": "dvtate.com",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "discord.js": "^14.0.3",
+    "dotenv": "^16.0.1",
+    "mysql": "^2.18.1"
+  }
+}
