@@ -34,7 +34,11 @@ client.on('interactionCreate', async interaction => {
         delete phrases.cache[channelId];
         phrases.flushChanCache(channelId);
         interaction.reply('Inactivity messages have now been disabled for this channel');
+        debug('User reset channel');
+        return;
     }
+
+    // TODO update interaction ts's
 });
 
 const chron = require('./chron');

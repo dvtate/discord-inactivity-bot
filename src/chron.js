@@ -11,6 +11,8 @@ const cache = {
 };
 module.exports.cache = cache;
 
+// TODO on bot restart check message history for lastActivity
+
 module.exports.track = function track(channelId) {
     cache[channelId] = { lastActivity: Date.now() };
 };
@@ -35,7 +37,7 @@ module.exports.enableChron = function enableChron(_client) {
 };
 
 module.exports.chron = async function chron() {
-    const threshold = 10000;
+    const threshold = 1000 * 60 * 60 * 3; // 3 hours
     const now = Date.now();
     await Promise.all(
         Object.entries(cache).map(
