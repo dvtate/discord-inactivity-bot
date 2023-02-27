@@ -3,8 +3,8 @@ const { DISC_BOT_TOKEN } = process.env;
 
 const debug = require('debug')('sexo:bot');
 
-const db = require('./db');
-db.begin();
+//const db = require('./db');
+//db.begin();
 
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require('discord.js');
